@@ -11,11 +11,20 @@ Namely, work arounds and documentation for odd backend code where a backend tick
 This component is fairly straight forward. Demonstrates a common React pattern of lifting up state as well as making modular components for reuse. You'll also find it uses HOCs for api calls.<br />
 
 ![Payment Screen Desktop](images/paymentScreenFull.png)
-![Payment Screen Thumb](images/paymentScreenThumb.png)
-![Payment Screen Thumb](images/paymentScreenMobile.png)
 
 ## EDIT MOTORCYCLE
 This is more engineered and dynamic set of code. The page is generated from reusable components, but the structure is all dictated from an easy to use configuration object. It's as DRY as possible.<br />
 
+![Listing Screen Desktop](images/editMotorcycle.png)
+
 ## API PROCESS
 This set of code shows I'm thinking large picture. All the API calls on the app flow throw this encapsulation so that we can catch bad access and refresh tokens and do interceptor logic as needed.<br />
+
+## UX WORK
+
+### SEARCH to PROFILE to PAYMENT PAGE Flow
+UX Designs for main conversion funnel.<br />
+
+### React Native Mobile
+No code is included from this in the code examples, but I complete all design and UX for the following screens.
+
