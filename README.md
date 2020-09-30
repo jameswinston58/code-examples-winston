@@ -1,6 +1,5 @@
-These are React Code Examples! You can find some explanations below.<br />
-All of the UX and Design work is also by me. 
-You can find screenshots of what this code looks like in production in the section below.<br />
+These are React code examples based largely on work from my current position as Frontend Developer and UX Designer at Twisted Road.<br />
+
 
 You can find more about me at [https://www.james-winston.com](https://www.james-winston.com) and [LinkedIn](www.linkedin.com/in/james-winston-1b2ab324)<br />
 [View My Resume](images/winston-resume.pdf)<br />
@@ -15,7 +14,7 @@ This component is fairly straight forward. Demonstrates a common React pattern o
 ![Payment Screen Desktop](images/paymentScreenFull.png)
 
 ## EDIT MOTORCYCLE
-This is more engineered and dynamic set of code. The page is generated from reusable components, but the structure is all dictated from an easy to use configuration object. It's as DRY as possible.<br />
+This is a more engineered and dynamic set of code. The page is generated from reusable components, but the structure is all dictated from an easy to use configuration object. It's as DRY as possible.<br />
 
 ![Listing Screen Desktop](images/editMotorcycle.png)
 
@@ -24,7 +23,7 @@ This set of code shows I'm thinking large picture. All the API calls on the app 
 
 ## UX WORK
 
-### React Native Mobile
+### React Native Mobile App
 No code is included from this in the code examples, but I completed all planning, design, supervision, additional coding, mentoring to junior developers, and UX for the following screens.
 ![Listing Screen Desktop](images/reactNative.png)
 
