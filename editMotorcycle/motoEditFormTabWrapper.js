@@ -2,12 +2,11 @@ import React, {Component} from 'react';
 import { Formik } from 'formik';
 import { compose } from 'recompose'
 import { Dimmer, Loader } from 'semantic-ui-react'
-import BannerFeedback from '../../../common/bannerFeedback.js'
-import { VALIDATION_SCHEMA } from '../steps/validationSchema.js'
-import { TOUCHED_FIELDS } from '../steps/touchedFields.js'
-import { cleanValuesForValidation } from '../utils/listMotoUtils.js'
-import { withWizard } from '../../../account/infoWizard/callUserWizard.js'
-import { withListingCalls } from '../calls/runMotoListing.js'
+import BannerFeedback from '../../../common/bannerFeedback.js' //not included in examples
+import { VALIDATION_SCHEMA } from '../steps/validationSchema.js' //not included in examples
+import { cleanValuesForValidation } from '../utils/listMotoUtils.js' //not included in examples
+import { withWizard } from '../../../account/infoWizard/callUserWizard.js' //not included in examples
+import { withListingCalls } from '../runMotoListing.js' 
 
 class ListingTabWrapper extends Component {
  
@@ -21,7 +20,7 @@ class ListingTabWrapper extends Component {
         }
     }
   
-    handleSubmit = (values, setFieldError, setSubmitting, setTouched, saveTypeID) => {
+    handleSubmit = (values, setFieldError, setSubmitting ) => {
         
         let beforeHandlerTest = this.props.beforeHandleSubmit(values, setFieldError)
 
@@ -31,14 +30,12 @@ class ListingTabWrapper extends Component {
         
         setSubmitting(true)
         
-        setTouched(TOUCHED_FIELDS[this.props.tabName]) 
-        
         let validationSchema = this.props.augmentValidation ? this.props.augmentValidation(VALIDATION_SCHEMA[this.props.tabName]) : VALIDATION_SCHEMA[this.props.tabName]
         
         validationSchema.validate(cleanValuesForValidation(values, this.props.tabName), 
           { abortEarly: false }
         ).then(function(valid) {
-          this.handleUpdateListing(values, setSubmitting, saveTypeID)      
+          this.handleUpdateListing(values, setSubmitting)      
         }.bind(this)).catch(function(responseData) {
 
           this.setState({ loading : false })
@@ -54,15 +51,13 @@ class ListingTabWrapper extends Component {
 
 
 
-  handleUpdateListing = (values, setSubmitting, saveTypeID) => {
+  handleUpdateListing = (values, setSubmitting) => {
 
     let valuesObject = JSON.parse(JSON.stringify(values))
 
     this.setState({ loading : true })
 
     valuesObject = this.props.massageData(valuesObject)
-    
-    console.log('values', valuesObject)
 
     this.props.updateListing(valuesObject, this.props.bikeID, 'Update from Edit Bike Page - ' + this.props.description + " - " + this.props.bikePrettyID , true)
     .then(function(responseData) {
@@ -121,10 +116,9 @@ class ListingTabWrapper extends Component {
           key={this.props.tabName}
           initialValues={this.props.defaultValues}
           onSubmit={(values, actions) => {
-            let saveTypeID = window.event.submitter.id
-            this.handleSubmit(values, actions.setFieldError, actions.setSubmitting, actions.setTouched, saveTypeID)
+            this.handleSubmit(values, actions.setFieldError, actions.setSubmitting)
           }}
-          render={({ errors, setFieldValue, values, setTouched, isSubmitting, setSubmitting, handleSubmit, submitForm }) => (
+          render={({ errors, setFieldValue, values, setTouched, isSubmitting, handleSubmit }) => (
             <React.Fragment>
               <form onSubmit={handleSubmit}> 
                 {this.props.render({
@@ -136,9 +130,6 @@ class ListingTabWrapper extends Component {
                 })} 
                 {!hideSaveButton && (
                   <button className="ui button primary large" id="save" type="submit">Save</button>
-                )}
-                {motorcycleState === 'needs_attention' && (
-                  <button className="ui button primary large" id="save-approve-submit" type="submit">Save and Approve</button>
                 )}
               </form>
           </React.Fragment>
@@ -167,4 +158,3 @@ ListingTabWrapper.defaultProps = {
     onSuccess : function() {},
     beforeHandleSubmit: function() { return true }
 }
-
