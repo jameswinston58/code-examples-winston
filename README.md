@@ -24,7 +24,7 @@ This set of code shows I'm thinking large picture. All the API calls on the app 
 ## UX WORK
 
 ### React Native Mobile App
-No code is included from this in the code examples, but I completed all planning, design, supervision, additional coding, mentoring to junior developers, and UX for the following screens.
+No code is included from this in the code examples, but I completed all planning, UX design, supervision, additional coding, and mentoring to junior developers.
 ![Listing Screen Desktop](images/reactNative.png)
 
 ### SEARCH to PROFILE to PAYMENT PAGE Flow
