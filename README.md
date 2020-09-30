@@ -6,7 +6,7 @@ You can find more about me at [https://www.james-winston.com](https://www.james-
 
 ## Overview
 The files include some in production quirks to show that I can work in a production env.<br />
-Namely, "work arounds" and documentation for odd backend code where a backend ticket would take to long to complete and delay frontend deployment, etc.<br />
+Namely, "work arounds" and documentation for odd backend code where a backend ticket would take too long to complete and delay frontend deployment---keeping that all importance balance between building the right thing, the right way, and building it quickly.<br />
 
 ## PAYMENT SCREEN
 This component is fairly straight forward. Demonstrates a common React pattern of lifting up state as well as making modular components for reuse. You'll also find it uses HOCs for api calls.<br />
