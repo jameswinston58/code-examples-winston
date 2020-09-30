@@ -10,7 +10,9 @@ Namely, work arounds and documentation for odd backend code where a backend tick
 ## PAYMENT SCREEN
 This component is fairly straight forward. Demonstrates a common React pattern of lifting up state as well as making modular components for reuse. You'll also find it uses HOCs for api calls.<br />
 
-![Payment Screen Desktop](images/test.png)
+![Payment Screen Desktop](images/paymentScreenFull.png)
+![Payment Screen Thumb](images/paymentScreenThumb.png)
+![Payment Screen Thumb](images/paymentScreenMobile.png)
 
 ## EDIT MOTORCYCLE
 This is more engineered and dynamic set of code. The page is generated from reusable components, but the structure is all dictated from an easy to use configuration object. It's as DRY as possible.<br />
