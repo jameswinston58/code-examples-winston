@@ -7,7 +7,7 @@ import ListingTabWrapper from './motoEditFormTabWrapper.js'
 import { withWizard } from '../../../account/infoWizard/callUserWizard.js' //not included in exam
 import { withListingCalls } from '../calls/runMotoListing.js'
 import { makeTitleCase } from '../../../common/util' //not included in examples
-import { BASIC_STEP } from '../../../../../projects/twisted_road_frontend/twistedroadfe/react-ui/src/components/list/motorcycle/steps/stepInfo.js' //not included in example
+import { BASIC_STEP } from '../../../list/motorcycle/steps/stepInfo.js' //not included in example
 
 
 const buildPanes = (listingData, editSections, onSuccess) => {
