@@ -4,7 +4,7 @@ You'll find two directories here.
 Here you'll find some examples of the work that has gone into setting up a component library for BONES, patientIQ's design system.
 It's still very much a work in progress, but features React, Typescript and some design system best practices like Styled Compnents, locality files strucutre (atomic design), and adherence to the Style Specification through themeing and the Styled System utility package.
 
-## applicationCode
+## paymentScreen
 This is a directory that includes the bones of a payment page that I set up for my previous job at Twisted Road, a consumer facing peer to peer motorcycle sharing app. It's still in React Classes.
 
 ## UX Design images
