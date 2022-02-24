@@ -1,7 +1,6 @@
 Below you'll find selections from my time as a Frontend Developer and UX Designer at Twisted Road and some of the screens I've implmented as a design system collborative with our product team at patientIQ
 
-You can find more about me at [https://www.james-winston.com](https://www.james-winston.com) and [LinkedIn](www.linkedin.com/in/james-winston-1b2ab324)<br />
-[View My Resume](images/winston-resume.pdf)<br />
+You can find more about me at [https://www.james-winston.com](https://www.james-winston.com) and [LinkedIn](www.linkedin.com/in/james-winston-1b2ab324)
 
 
 ![Payment Screen Desktop](images/paymentScreenFull.png)
